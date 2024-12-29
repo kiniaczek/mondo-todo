@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <% if (isDaySelected){ %>
+    <div class="selected-day-header">
+      <span><a href="/todos">Go back to week plan</a></span>
+      <h1><%= isDaySelected.charAt(0).toUpperCase() + isDaySelected.slice(1) %> plan</h1>
+    </div>
+      <ul class = "one-day-listaRzeczy">
+      <% todos.forEach( (el, i) => { %>
+          <li class='todoItem' data-id='<%=el._id%>'>
+              <span class="one-day-todo <%= el.completed ? 'one-day-completed' : 'not'%>"><%= el.todo %></span>
+              <div class="one-day-data-completed checkbox-wrapper-19">
+                  <input type="checkbox" id='<%= 'zrobione'+ i %>' <%= el.completed ? 'checked' : ''%>> 
+                  <label for='<%= 'zrobione'+ i %>' class="check-box <%= el.completed ? 'check-box-completed' : 'check-box-not-completed'%>">
+              </div>
+              <span class='data-trashcan del'><i class="fa-regular fa-trash-can"></i></span>
+          </li>
+    <% }) %>    
+    </ul>
+    <% } else { %>
+      <h1>Week plan</h1>
+      <div class="sideBySide">
+        <%todos.forEach(el => { %>
+            <div class='column'>
+              <h2><a href="/todos?day=<%=el._id%>"><%= el._id.charAt(0).toUpperCase() + el._id.slice(1) %></a></h2>
+              <ul class="listaRzeczy">
+                  <% el.todos.forEach((el, i) => { %>
+                    <li class="todoItem" data-id="<%= el._id %>">
+                      <span class="data-todo <%= el.completed ? 'completed' : 'not' %>"><%= el.todo.toUpperCase() %></span>
+                      <div class="data-completed checkbox-wrapper-19">
+                        <input type="checkbox" id="<%= 'zrobione' + i %>" <%= el.completed ? 'checked' : '' %>> 
+                        <label for="<%= 'zrobione' + i %>" class="check-box <%= el.completed ? 'check-box-completed' : 'check-box-not-completed' %>"></label>
+                      </div>
+                      <span class="data-trashcan del"><i class="fa-regular fa-trash-can"></i></span>
+                    </li>
+                  <% }) %>    
+                </ul>
+                </div>
+            <% }) %>
+          </div>
+          <% } %>
+    
+    <h2>Things left to do: <%= left %></h2>
+
+    <form action="/todos/createTodo" onsubmit="return validateForm()" method='POST' name='add-todo-form'>
+        <input type="text" placeholder="Enter Daily Task" name='todoItem'>
+        <select name="day" id="day-select" required>
+            <option value="">Choose day</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+          </select>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

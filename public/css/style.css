@@ -1,0 +1,367 @@
+@font-face {
+    font-family: amigosLine;
+    src: url("../assets/AmigosLine.otf");
+}
+@font-face {
+  font-family: SimpleSaturday;
+  src: url("../assets/SimpleSaturday.otf");
+}
+
+body {
+    background-image: url("../assets/background.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    height: 95%;
+}
+
+.selected-day-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.selected-day-header > span {
+  width: 30%;
+}
+
+.selected-day-header > span > a {
+  color: #383837;
+  font-size: 2vw;
+  font-family: amigosLine;
+  text-decoration: none;
+}
+
+.selected-day-header > h1 {
+  width: 40%;
+}
+
+.selected-day-header > h1 {
+  color: white;
+  font-size: 4vw;
+  font-family: amigosLine;
+  text-decoration: none;
+  font-weight: 140;
+}
+
+h1 {
+    font-size: 5em;
+    color: #383837;
+    font-family: amigosLine;
+    font-weight: 140;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+.listaRzeczy {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    border: 1px dotted #353535;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    -webkit-box-shadow: inset 0px 0px 25px 0px rgba(191, 191, 192, 1);
+    -moz-box-shadow: inset 0px 0px 25px 0px rgba(191, 191, 192, 1);
+    box-shadow: inset 0px 0px 25px 0px rgba(191, 191, 192, 1);
+}
+
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.column {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 13vw;
+}
+
+.column > h2 > a {
+  color: white;
+  font-family: amigosLine;
+  font-size: 3.5vw;
+  text-decoration: none;
+  font-weight: 140;
+}
+
+.data-todo {
+  width: 70%;
+  font-family: SimpleSaturday;
+  font-size: 1.5vw;
+  font-weight: 100;
+  color: #383837;
+}
+
+
+.data-completed {
+  width: 15%;
+  margin-left: 5%;
+}
+
+.data-trashcan {
+  width: 10%;
+  text-align: right;
+}
+
+.sideBySide {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: flex-start;
+align-content: flex-start;
+}
+
+.todoItem:last-child {
+    border-bottom: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #A79281;
+}
+
+li >.one-day-completed {
+  text-decoration: line-through;
+  color: #A79281;
+}
+
+.del {
+    color: #514c4c;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.one-day-todo {
+  width: 70%;
+  font-family: SimpleSaturday;
+  font-size: 1.5vw;
+  font-weight: 100;
+  color: #383837;
+}
+
+.one-day-data-completed {
+  width: 5%;
+  margin-left: 30%;
+}
+
+.one-day-listaRzeczy {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  border: 1px dotted #353535;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  width: 30vw;
+  -webkit-box-shadow: inset 0px 0px 25px 0px rgba(191, 191, 192, 1);
+  -moz-box-shadow: inset 0px 0px 25px 0px rgba(191, 191, 192, 1);
+  box-shadow: inset 0px 0px 25px 0px rgba(191, 191, 192, 1);
+}
+
+h2 {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    color: #383837;
+    font-family: amigosLine;
+    font-weight: 200;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form select {
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    font-family: SimpleSaturday;
+    font-size: 1.4em;
+}
+
+form input[type="submit"] {
+    width: 80%;
+    background-color: #A79281;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: SimpleSaturday;
+    font-size: 1.6em;
+    font-weight: 100;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #A79281;
+}
+
+  .checkbox-wrapper-19 {
+    box-sizing: border-box;
+    --checkbox-height: 18px;
+  }
+
+  @-moz-keyframes dothabottomcheck-19 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: calc(var(--checkbox-height) / 2);
+    }
+  }
+
+  @-webkit-keyframes dothabottomcheck-19 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: calc(var(--checkbox-height) / 2);
+    }
+  }
+
+  @keyframes dothabottomcheck-19 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: calc(var(--checkbox-height) / 2);
+    }
+  }
+
+  @keyframes dothatopcheck-19 {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      height: calc(var(--checkbox-height) * 1.2);
+    }
+  }
+
+  @-webkit-keyframes dothatopcheck-19 {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      height: calc(var(--checkbox-height) * 1.2);
+    }
+  }
+
+  @-moz-keyframes dothatopcheck-19 {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      height: calc(var(--checkbox-height) * 1.2);
+    }
+  }
+
+  .checkbox-wrapper-19 input[type=checkbox] {
+    display: none;
+  }
+
+  .checkbox-wrapper-19 .check-box {
+    height: var(--checkbox-height);
+    width: var(--checkbox-height);
+    background-color: transparent;
+    border: calc(var(--checkbox-height) * .1) solid #514c4c;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-transition: border-color ease 0.2s;
+    -o-transition: border-color ease 0.2s;
+    -webkit-transition: border-color ease 0.2s;
+    transition: border-color ease 0.2s;
+    cursor: pointer;
+  }
+  .checkbox-wrapper-19 .check-box::before,
+  .checkbox-wrapper-19 .check-box::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    height: 0;
+    width: calc(var(--checkbox-height) * .2);
+    background-color: #A79281;
+    display: inline-block;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 5px;
+    content: " ";
+    -webkit-transition: opacity ease 0.5;
+    -moz-transition: opacity ease 0.5;
+    transition: opacity ease 0.5;
+  }
+  .checkbox-wrapper-19 .check-box::before {
+    top: calc(var(--checkbox-height) * .72);
+    left: calc(var(--checkbox-height) * .41);
+    box-shadow: 0 0 0 calc(var(--checkbox-height) * .05) var(--background-color);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  .checkbox-wrapper-19 .check-box::after {
+    top: calc(var(--checkbox-height) * .37);
+    left: calc(var(--checkbox-height) * .05);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .checkbox-wrapper-19 input[type=checkbox]:checked + .check-box,
+  .checkbox-wrapper-19 .check-box.checked {
+    border-color: #A79281;
+  }
+  .checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::after,
+  .checkbox-wrapper-19 .check-box.checked::after {
+    height: calc(var(--checkbox-height) / 2);
+    -moz-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+    -o-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+    -webkit-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+    animation: dothabottomcheck-19 0.2s ease 0s forwards;
+  }
+  .checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::before,
+  .checkbox-wrapper-19 .check-box.checked::before {
+    height: calc(var(--checkbox-height) * 1.2);
+    -moz-animation: dothatopcheck-19 0.4s ease 0s forwards;
+    -o-animation: dothatopcheck-19 0.4s ease 0s forwards;
+    -webkit-animation: dothatopcheck-19 0.4s ease 0s forwards;
+    animation: dothatopcheck-19 0.4s ease 0s forwards;
+  }
+
+

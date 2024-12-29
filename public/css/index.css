@@ -1,0 +1,87 @@
+@font-face {
+    font-family: amigosLine;
+    src: url("../assets/AmigosLine.otf");
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url("../assets/background.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    height: 95%;
+}
+
+h1 {
+    font-family: amigosLine;
+    font-size: 8vw;
+    font-weight: 100;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+button a {
+    font-family: amigosLine;
+    font-size: 4vw;
+    font-weight: 100;
+    text-decoration: none;
+    color: white;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 95%;
+}
+
+
+/* CSS */
+.button-74 {
+  background-color: #A79281;
+  border: 2px solid #fcfcfb;
+  border-radius: 30px;
+  box-shadow: #424242 4px 4px 0 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:hover a {
+  color: #A79281;
+}
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+
