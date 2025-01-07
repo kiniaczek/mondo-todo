@@ -369,5 +369,17 @@ form input[type="submit"]:hover {
       flex-direction: column;
     } .column {
       width: 95vw;
+    } .column > h2 > a {
+      font-size: 10vw;
+    } .data-todo {
+      font-size: 1.5em;
+    } .selected-day-header > h1 {
+      font-size: 8vw;
+    } .one-day-todo {
+      font-size: 5vw;
+    } .selected-day-header > span > a {
+      font-size: 5vw;
+    } .one-day-listaRzeczy {
+      width: 80vw;
     } 
   }
