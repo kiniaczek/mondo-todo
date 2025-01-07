@@ -364,4 +364,10 @@ form input[type="submit"]:hover {
     animation: dothatopcheck-19 0.4s ease 0s forwards;
   }
 
-
+  @media (max-width: 800px) {
+    .sideBySide {
+      flex-direction: column;
+    } .column {
+      width: 95vw;
+    } 
+  }
